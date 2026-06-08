@@ -31,5 +31,7 @@ class Program
         list.Add(50);
         list.Add(99);
         list.Add(7);
+        Console.WriteLine(list.GetSummary());
     }
+    
 }

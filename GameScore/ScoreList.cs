@@ -26,5 +26,14 @@
                 _index++;
                 
             }
-            
+
+            public string GetSummary()
+            {
+                var result = "";
+                for (int i = 0; i < _index; i++)
+                {
+                    result += $"Player {i + 1} scored {_scores[i]}\n";
+                }
+                return result;
+            }
         }
