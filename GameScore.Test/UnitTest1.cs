@@ -10,7 +10,7 @@ public class Tests
     [Test]
     public void Test1()
     {
-        var list = new ScoreList();
+        var list = new GenericList<int>();
         list.Add(10);
         list.Add(25);
 
