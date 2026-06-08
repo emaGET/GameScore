@@ -4,7 +4,7 @@
         {
             
             private T[] _values;
-            private T _index;
+            private int _index;
 
             public GenericList()
             {
@@ -17,9 +17,9 @@
                 
                 if (_index >= _values.Length)
                 {
-                    var newScores = new T[_values.Length * 2];
-                    Array.Copy(_values, newScores, _values.Length);
-                    _values = newScores;
+                    var newValues = new T[_values.Length * 2];
+                    Array.Copy(_values, newValues, _values.Length);
+                    _values = newValues;
                 }
                 
                 _values[_index] = value;
