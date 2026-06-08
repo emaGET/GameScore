@@ -25,13 +25,13 @@ class Program
 {
     static void Main()
     {
-        var list = new ScoreList();
-        list.Add(10);
-        list.Add(25);
-        list.Add(50);
-        list.Add(99);
-        list.Add(7);
-        Console.WriteLine(list.GetSummary());
+        var scores = new GenericList<int>();
+        scores.Add(10);
+        scores.Add(25);
+        scores.Add(50);
+        scores.Add(99);
+        scores.Add(7);
+        Console.WriteLine(scores.GetSummary());
     }
     
 }

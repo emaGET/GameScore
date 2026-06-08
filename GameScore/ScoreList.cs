@@ -1,28 +1,28 @@
 ﻿namespace GameScore;
         
-        public class ScoreList
+        public class GenericList<T> //ScoreList
         {
             
-            private int[] _scores;
-            private int _index;
+            private T[] _values;
+            private T _index;
 
-            public ScoreList()
+            public GenericList()
             {
-                _scores = new int[3];
+                _values = new T[3];
                 _index = 0;
             }
 
-            public void Add(int score)
+            public void Add(T value)
             {
                 
-                if (_index >= _scores.Length)
+                if (_index >= _values.Length)
                 {
-                    var newScores = new int[_scores.Length * 2];
-                    Array.Copy(_scores, newScores, _scores.Length);
-                    _scores = newScores;
+                    var newScores = new T[_values.Length * 2];
+                    Array.Copy(_values, newScores, _values.Length);
+                    _values = newScores;
                 }
                 
-                _scores[_index] = score;
+                _values[_index] = value;
                 _index++;
                 
             }
@@ -32,7 +32,7 @@
                 var result = "";
                 for (int i = 0; i < _index; i++)
                 {
-                    result += $"Player {i + 1} scored {_scores[i]}\n";
+                    result += $"Player {i + 1} scored {_values[i]}\n";
                 }
                 return result;
             }
